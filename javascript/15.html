@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript - form inputs</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css" />
+    <script>
+        function registerProduct() {
+            document.getElementById('productSummary').className = "d-block";
+            document.getElementById('btnRegister').className = "d-none";
+            document.getElementById('lblProductName').innerText = document.getElementById('productName').value;
+            document.getElementById('lblProductPrice').innerText = document.getElementById('productPrice').value;
+            document.getElementById('lblProductDelevery').innerText = document.getElementById('productDelevery').value;
+            stockStatus();
+        }
+        /* Switcher */
+        function stockStatus() {
+            let stockStatus = document.getElementById('productStock').checked;
+            if (stockStatus) {
+                document.getElementById('lblProductStock').innerText = "Stock Available";
+                document.querySelector('#productStock+span').innerText = "Stock Available";
+            } else {
+                document.getElementById('lblProductStock').innerText = "Out of Stock";
+                document.querySelector('#productStock+span').innerText = "Out of Stock";
+            }
+        }
+        /* Edit product */
+        function editProduct() {
+            document.getElementById('register').innerText = "Save";
+            document.getElementById('register').className = "btn btn-success";
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <button data-bs-target="#registerProduct" data-bs-toggle="modal" class="btn btn-primary"
+                    id="btnRegister"><span class="bi-plus-square"></span> Register Product</button>
+
+            </div>
+            <div class="col-sm-12">
+                <div class="d-none" id="productSummary">
+                    <h2>Product Summary</h2>
+                    <dl>
+                        <dt>Product Name</dt>
+                        <dd id="lblProductName"></dd>
+                        <dt>Product Price</dt>
+                        <dd id="lblProductPrice"></dd>
+                        <dt>Delivery</dt>
+                        <dd id="lblProductDelevery"></dd>
+                        <dt>Stock</dt>
+                        <dd id="lblProductStock"></dd>
+                    </dl>
+                    <button class="btn btn-primary" data-bs-target="#registerProduct" data-bs-toggle="modal"
+                        onclick="editProduct()">Edit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="registerProduct">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Register Product</h2>
+                    <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <dl>
+                        <dt>Product Name</dt>
+                        <dd><input type="text" id="productName" name="productName" class="form-control" /></dd>
+                        <dt>Product Price</dt>
+                        <dd><input type="text" id="productPrice" name="productPrice" class="form-control" /></dd>
+                        <dt>Shipped To </dt>
+                        <dd>
+                            <select class="form-select" id="productDelevery" name="productDelevery">
+                                <option>Mumbai</option>
+                                <option>Pune</option>
+                                <option>Hyderabad</option>
+                            </select>
+                        </dd>
+                        <dt>Stock</dt>
+                        <dd class="form-switch"><input type="checkbox" onchange="stockStatus()" class="form-check-input"
+                                id="productStock" />
+                            <span>Available</span>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" onclick="registerProduct()" id="register"
+                        data-bs-dismiss="modal">Register</button>
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+</body>
+
+</html>

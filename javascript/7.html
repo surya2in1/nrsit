@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How javascript refer html elements</title>
+    <script type="text/javascript">
+        function onBodyLoad() {
+            document.getElementById('pic').src = 'test.png';
+            document.getElementById('btnRegister').value = "Register";
+            document.getElementById('btnLogin').value = "Login";
+        }
+
+    </script>
+</head>
+
+<body onload="onBodyLoad()">
+
+    <h1>How javascript refer html elements with element id</h1>
+    <img height="100" width="100" border="1" id="pic" name="pic" />
+    <div>
+        <form name="frmRegister">
+            <h2>Registration</h2>
+            User ID: <input type="text" /> <input type="button" id="btnRegister" name="btnRegister" />
+        </form>
+    </div>
+    <div>
+        <form name="frmLogin">
+            <h2>Login</h2>
+            User ID: <input type="text" /> <input type="button" id="btnLogin" name="btnLogin" />
+        </form>
+    </div>
+    <div>
+        <form>
+            Gender:<input type="radio" name="gender" /> Male
+            <input type="radio" name="gender" /> Female
+        </form>
+    </div>
+    <div>
+        <p>This is first Para</p>
+        <p>This is second Para</p>
+    </div>
+    <script>
+        let myCol = document.getElementsByName('gender');
+        console.log(myCol);
+    </script>
+</body>
+
+</html>

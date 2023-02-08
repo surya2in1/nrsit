@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How javascript refer html elements with querySelector</title>
+    <script type="text/javascript">
+        function onBodyLoad() {
+            document.querySelector('img').src = 'test.png';
+            document.querySelector('#btnRegister').value = 'Register';
+            document.querySelector('.btnPrimary').value = 'Log In';
+        }
+    </script>
+</head>
+
+<body onload="onBodyLoad()">
+
+    <h1>How javascript refer html elements with querySelector</h1>
+    <img height="100" width="100" border="1" id="pic" name="pic" />
+    <div>
+        <form name="frmRegister">
+            <h2>Registration</h2>
+            User ID: <input type="text" /> <input type="button" id="btnRegister" name="btnRegister" />
+        </form>
+    </div>
+    <div>
+        <form name="frmLogin">
+            <h2>Login</h2>
+            User ID: <input type="text" /> <input type="button" class="btnPrimary" id="btnLogin" name="btnLogin" />
+        </form>
+    </div>
+</body>
+
+</html>

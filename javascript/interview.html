@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Interview Question</title>
+</head>
+
+<body>
+    <script>
+        // 1
+        // let a = [];
+        // let b = [];
+        // console.log(a == b);
+        // console.log(a === b);
+    </script>
+    <script>
+        // 2
+        // let a = [];
+        // let b = a;
+        // console.log(a == b);
+        // console.log(a === b);
+    </script>
+    <script>
+        // 3
+        // let a = [20];
+        // let b = [20];
+        // console.log(a[0] == b[0]);
+        // console.log(b[0] === b[0]);
+    </script>
+    <script>
+        // 4 Destructuring - here array breaks and elements comeoutside.
+        // let z = [1, 2, 3, 4];
+        // let a = {name: 'Surya'};
+        // console.log(...z); 
+    </script>
+    <script>
+        // 5
+        // console.log(typeof NaN); // special type of number 
+    </script>
+    <script>
+        // 6
+        // let data = 10 - - 10;
+        // console.log(data); // 20 
+    </script>
+    <script>
+        // 7 It removed duplicate values
+        // const set = new Set([1, 1, 2, 3, 4,]);
+        // console.log(set); // 1, 2, 3, 4 
+    </script>
+    <script>
+        // 8 Record found and deleted it return true.
+        // let data = { name: "surya" };
+        // console.log(delete data.name); // true
+        // console.log(delete data); // can not delete variable, constant - we can delete only properties
+    </script>
+    <script>
+        // 9 Get value from the array
+        // let data = ['Peter', 'Surya', 'Sayali'];
+        // let [y] = data; // Peter
+        // console.log(y);
+
+        // let [a, b] = data;
+        // console.log(b); // Surya
+    </script>
+    <script>
+        // 10
+        // let data = ["Peter", "Surya", "Sayali"];
+        // let [, , y] = data; // How you will get third value.
+        // console.log(y);
+    </script>
+    <script>
+        // 11
+        // let data = { name: 'Surya', age: 26, city: 'Solapur' };
+        // let { name } = data; // Surya
+        // let { name, city } = data; // Surya Solapur
+        // console.log(name);
+        // console.log(city);
+    </script>
+    <script>
+        // 12 How you can merge two objects
+        // let data = { name: "Surya", age: 26 };
+        // let info = { city: "Solapur", State: "Maharastra" };
+        // data = { ...data, ...info };
+        // console.log(data);
+    </script>
+    <script>
+        // 13
+        // let data = { name: "Surya", age: 26 };
+        // let info = { city: "Solapur", State: "Maharastra" };
+        // data = { data, ...info };
+        // console.log(data);
+    </script>
+    <script>
+        // 14 skill will same position but it will overwrite with second object skill value.
+        // let data = { name: "Surya", age: 26, skill: "HTML" };
+        // let info = { city: "Solapur", State: "Maharastra", skill: "NodeJs" };
+        // data = { ...data, ...info };
+        // console.log(data);
+    </script>
+    <script>
+        //15
+        // const name = "Surya";
+        // console.log(name()); // Error: Name is not function
+    </script>
+    <script>
+        //16
+        // let result = false || {} || null;
+        // console.log(result);
+        // if ({}) {
+        //     console.log('It is true');
+        // }
+    </script>
+    <script>
+        //17
+        // let result = null || false || ''; // If all are false it will pickup last one
+        // let more = null || '' || false; // If all are false it will pickup last one
+        // console.log(result); // empty string
+        // console.log(more); // false
+    </script>
+    <script>
+        //18
+        // let result = [] || 0 || true;
+        // console.log(result); // array is true it will return array.
+    </script>
+    <script>
+        //19
+        // console.log(Promise.resolve(5));// promise fullfilled 5
+    </script>
+    <script>
+        //20
+        // console.log("❤" === "❤"); // true (window + . for emojis) // It compaire unicode
+    </script>
+    <script>
+        //21
+        // JSON.parse(); // What it will do ?
+    </script>
+    <script>
+        //22
+        // let name = "Surya";
+        // function getName() {
+        //     console.log(name); // Error: Cannot access 'name' before initialization
+        //     let name = "Chavan";
+        // }
+        // getName();
+
+        // let and const you should have to declare first and then use it. They are block level scope. Hoisting is here.
+        // If you declare it as var it will do hosting so you can use it before declare.
+    </script>
+    <script>
+        //23
+        // let name = "Surya";
+        // function getName() {
+        //     console.log(name); // Surya
+        // }
+        // getName();
+    </script>
+    <script>
+        //24
+        // console.log(`${(x => x)('I love')} to program`); // arrow function return string.
+    </script>
+    <script>
+        //25
+        // Output should be 6
+        // function sumValues(x, y, z) {
+        //     return x + y + z;
+        // }
+        // console.log(sumValues(...[1, 2, 3]));
+        // A.sumValues([...1, 2, 3])
+        // B.sumValues([...[1, 2, 3]])
+        // C.sumValues(...[1, 2, 3])
+        // D.sumValues([1,2,3])
+    </script>
+    <script>
+        //26
+        // const name = "code step by step";
+        // console.log(!typeof name === "object"); // false
+        // console.log(!typeof name === "string"); // false
+        // console.log(!typeof name === false); // true
+    </script>
+    <script>
+        //27
+        // let a = "Surya";
+        // let b = 26;
+        // console.log(isNaN(a)); // true
+        // console.log(isNaN(b)); // false
+    </script>
+    <script>
+        //28
+        // let person = { name: "Suryakant" };
+        // Object.seal(person); // You can't add new properties. You can just update existing.
+        // person.age = 29; // Can not do this
+        // person.name = "Surya"; // allow only update existing
+        // console.log(person);
+    </script>
+    <script>
+        //29 How you can remove first element from array.
+        // let data = [2, 3, 4, 5, 6];
+        // console.log(data);
+        // data.shift();
+        // console.log(data);
+    </script>
+    <script>
+        // 30 How you can remove last element from array
+        // let data = [2, 3, 4, 5, 6];
+        // console.log(data);
+        // data.pop();
+        // console.log(data);
+    </script>
+    <script>
+        // 31
+        // How you can check odd or even number
+        // let a = 11;
+        // console.log(`${(a % 2) ? 'Odd number' : 'Even number'}`);
+    </script>
+    <script>
+        // 32
+        // let data = { name: 'Surya' };
+        // delete data.name;
+        // console.log(data); // blank object
+    </script>
+    <script>
+        // 33 Convert data to boolean false value
+        // let data = "true";
+        // console.log(!data);
+    </script>
+    <script>
+        // 33 Convert data to boolean true value
+        // let data = "true";
+        // console.log(!!data);
+    </script>
+    <script>
+        // 34
+        // What is the difference between map and forEach function
+        // map function return something where as forEach will not return anything.
+    </script>
+    <script>
+        // 35
+        // let data = ['Anil', 'Peter', 'Bruce'];
+        // delete data[1];
+        // console.log(data); // It will delete Peter and it has empty space
+    </script>
+    <script>
+        // 36
+        // let data = ['Anil', 'Peter', 'Bruce'];
+        // delete data[1];
+        // console.log(data); // It will delete Peter and it has empty space
+        // console.log(data.length); // 3
+    </script>
+    <script>
+        // 37 How you can merge two array
+        // let a = [1, 2, 3,];
+        // let b = [4, 5, 6];
+        // let c = [...a, ...b];
+        // console.log(c);
+    </script>
+    <script>
+        // 37 It will merge array not overwrite 4. array can have duplicate value but object cant have duplicate properties so it overwrite (skill example previous)
+        // let a = [1, 2, 3, 4];
+        // let b = [4, 5, 6];
+        // let c = [...a, ...b];
+        // console.log(c);
+    </script>
+    <script>
+        // 38
+        // let a = 3 ** 3;
+        // console.log(a); // 27 3 square 3 * 3 * 3
+    </script>
+    <script>
+        // 39
+        // let a = 2;
+        // setTimeout(function () {
+        //     console.log(a); // 100
+        // }, 0);
+        // a = 100;
+
+        // Whenever we use setTimeout, setTimeInterval(special function) it will have stack and put all
+        // special function at very last of the stack  
+    </script>
+    <script>
+        // 40 two different variables
+        // let a = 40;
+        // let A = 40;
+        // console.log(A); 
+    </script>
+    <script>
+        // 41 Variable names can not start with number
+        // let A10 = 'Like'; // Allowed
+        // let 10A = 'Dont like'; // not allowed;
+        // console.log(A10); //Like
+    </script>
+    <script>
+        // 42
+        // let a = "Hello";
+        // let b = `Hello`;
+        // console.log(a === b); // true
+    </script>
+</body>
+
+</html>

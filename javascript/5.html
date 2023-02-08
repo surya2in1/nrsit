@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How javascript refer html elements</title>
+    <script type="text/javascript">
+        function onBodyLoad() {
+            window.document.images[0].src = "test.png";
+            window.document.forms[0].elements[1].value = "Register";
+            window.document.forms[1].elements[1].value = "Login";
+        }
+    </script>
+</head>
+
+<body onload="onBodyLoad()">
+
+    <h1>How javascript refer html elements</h1>
+    <img height="100" width="100" border="1" />
+    <div>
+        <form>
+            <h2>Registration</h2>
+            User ID: <input type="text" /> <input type="button" />
+        </form>
+    </div>
+    <div>
+        <form>
+            <h2>Login</h2>
+            User ID: <input type="text" /> <input type="button" />
+        </form>
+    </div>
+</body>
+
+</html>

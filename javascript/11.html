@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Output Techniques - document.write</title>
+    <script>
+        function deleteRecord() {
+            let flag = confirm("Do you want to delete Record ?");
+            if (flag) {
+                document.write("<font color='red'><b><i>Record Deleted</i></b></font>"); // markup
+            } else {
+                document.write("Record will not be delete"); // plain text
+
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="deleteRecord()">Delete Record</button>
+</body>
+
+</html>
