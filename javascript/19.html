@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            function SubmitClick(){
+                var age = parseInt(document.getElementById("Age").value);
+                document.write("You will be " + (age+1) + " next year.");
+            }
+        </script>
+    </head>
+    <body>
+        Your age : <input type="number" min="15" max="30" value="15" id="Age"> <button onclick="SubmitClick()">Submit</button>
+    </body>    
+</html>
